@@ -10,10 +10,7 @@ var_dump($parola);
 $lunghezzaParagraf = $_GET["paragrafo"];
 $lunghezza = strlen($lunghezzaParagraf);
 
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +19,7 @@ $lunghezza = strlen($lunghezzaParagraf);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Back End</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,34 +30,19 @@ $lunghezza = strlen($lunghezzaParagraf);
     <span>la lunghezza del paragrafo è di :
         <?php echo  strlen($lunghezzaParagraf); ?> caratteri </span>
 
-
-
     <h3>Questo è il paragrafo che mi è stato scritto:
         <?php echo $paragrafo; ?>
     </h3>
     <span>la lunghezza del paragrafo è di :
-        <?php echo  strlen($lunghezzaParagraf); ?> caratteri </span>
+        <?php echo strlen($lunghezzaParagraf); ?> caratteri </span>
 
     <h3>
         <span>La parola che verrà censurata è :
             <?php echo str_replace("$parola", "***", $_GET["parola"]); ?></span>
+
+        <!-- inserire la parola, poi ciò con cui deve essere sostituita, e infine sostiurla -->
     </h3>
 
 </body>
 
 </html>
-
-$str = "w3docs is W3docs";
-
-// Word to be replaced
-$w1 = "w3docs";
-
-// Replaced by
-$w2 = "W3DOCS";
-
-// Using str_replace() function
-// for replacing the word
-$str = str_replace($w1, $w2, $str);
-
-// Printing the result
-echo $str;
