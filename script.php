@@ -23,22 +23,28 @@ $lunghezza = strlen($lunghezzaParagraf);
 </head>
 
 <body>
+
+
     <h1> Back end</h1>
     <h3>Questo è il paragrafo che mi è stato scritto:
-        <?php echo $paragrafo; ?>
+        <span class="text-danger"><?php echo $paragrafo; ?></span>
+
     </h3>
-    <span>la lunghezza del paragrafo è di :
-        <?php echo  strlen($lunghezzaParagraf); ?> caratteri </span>
+    <p>la lunghezza del paragrafo è di :
+        <span class="text-danger"><?php echo  strlen($lunghezzaParagraf); ?></span> caratteri
+    </p>
 
     <h3>Questo è il paragrafo che mi è stato scritto:
-        <?php echo $paragrafo; ?>
+        <span class="text-danger"><?php echo $paragrafo; ?></span>
     </h3>
-    <span>la lunghezza del paragrafo è di :
-        <?php echo strlen($lunghezzaParagraf); ?> caratteri </span>
+    <p>la lunghezza del paragrafo è di :
+        <span class="text-danger"><?php echo strlen($lunghezzaParagraf); ?></span> caratteri
+    </p>
 
     <h3>
-        <span>La parola che verrà censurata è :
-            <?php echo str_replace("$parola", "***", $_GET["parola"]); ?></span>
+        <p>La parola che verrà censurata è :
+            <span class="text-danger"><?php echo str_replace("$parola", "***", $_GET["parola"]); ?></span>
+        </p>
 
         <!-- inserire la parola, poi ciò con cui deve essere sostituita, e infine sostiurla -->
     </h3>
